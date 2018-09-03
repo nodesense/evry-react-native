@@ -70,17 +70,40 @@ export default class Cart extends React.Component {
 
     }
 
-    removeItem(id) {
+    // callback, pass this function to props to child component
+    // ES.NEXT
+    removeItem = (id) => {
         console.log('remove item ', id)
         // TODO
+        const items = this.state.items.filter (item => item.id != id);
+        this.setState({ items });
+        this.recalculate(items);
     }
 
-    updateItem(id, qty) {
+    // update item inside array
+    // must have new array/clone the items
+    // must have cloned item
+
+    updateItem = (id, qty) => {
         console.log("update ", id, qty);
-        //TODO
+        
+        // clonned array, for CartScrollList
+        let items = this.state.items.map (item => {
+            if (item.id == id) {
+                // WRONG, Mutating object
+                //item.qty = qty; 
+                 
+                // GOOD clone item, return with updated qty
+                return {...item, qty}
+            }
+            return item;
+        })
+
+        this.setState({items})
+        this.recalculate(items)
     }
 
-    empty() {
+    empty = ()  => {
         //TODO
         this.setState({
             items: []
@@ -127,12 +150,18 @@ export default class Cart extends React.Component {
             /> 
 
             {/* pass removeItem, updateItem to child */}
-            <CartScrollList  items={this.state.items}
+            <View style={styles.cartList}>
+                <CartScrollList  items={this.state.items}
+                             removeItem={this.removeItem}   
+                             updateItem={this.updateItem}
                 />
-
-            <CartSummary amount={this.state.amount}
-                         totalItems = {this.state.totalItems}
-                />
+            </View>
+            
+            <View style={styles.cartSummary}>
+                <CartSummary amount={this.state.amount}
+                            totalItems = {this.state.totalItems}
+                    />
+            </View>
 
         </View>
 )
@@ -144,7 +173,15 @@ export default class Cart extends React.Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#F0F0F0'
-     
+      backgroundColor: '#F0F0F0',
+      flexDirection: 'column'
     },
+
+    cartList: {
+        flex: 3
+    },
+
+    cartSummary: {
+        flex: 1
+    }
   });

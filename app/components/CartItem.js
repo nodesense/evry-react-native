@@ -3,11 +3,26 @@ import React, {PureComponent} from "react";
 
 import {View, Text, TextInput, Button, StyleSheet} from "react-native";
 
+import PropTypes from 'prop-types';
+
 // PureComponent implements shouldComponentUpdate method
 // won't call render if there is no difference in props and state
 
 export default class CartItem extends PureComponent {
      
+    static propTypes = {
+        removeItem: PropTypes.func.isRequired,
+        updateItem: PropTypes.func.isRequired,
+
+        // item: PropTypes.object // won't validate internal attributes
+        item: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            price: PropTypes.number.isRequired,
+            qty: PropTypes.number.isRequired
+        }).isRequired
+    }
+
     constructor(props) {
         super(props);
         console.log("cart item created", props.item.id);
@@ -30,7 +45,17 @@ export default class CartItem extends PureComponent {
 
                 <Text> RS: {item.price * item.qty}</Text>
             
-                <Button title="remove" onPress={ () => {} }></Button>
+                <Button title="remove" 
+                        onPress={ () => this.props.removeItem(item.id) }>
+                </Button>
+
+                <Button title="Qty +1" 
+                        onPress={ () => this.props.updateItem(item.id, item.qty + 1) }>
+                </Button>
+
+                <Button title="Qty -1" 
+                        onPress={ () => this.props.updateItem(item.id, item.qty - 1) }>
+                </Button>
                 
 
             </View>

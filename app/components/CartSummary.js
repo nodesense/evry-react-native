@@ -1,9 +1,20 @@
 //CartSummary.js
 import React from "react";
 
-import {View, Text} from "react-native";
- 
+import {View, Text, StyleSheet} from "react-native";
+
+import PropTypes from 'prop-types';
+
 export default class CartSummary extends React.PureComponent {
+
+    // static variable inside class ES.NEXT
+    //react keyword
+    static propTypes = {
+        amount: PropTypes.number.isRequired, // mandatory
+        totalItems: PropTypes.number.isRequired
+    }
+
+
     // creation cycle, once once
     constructor(props) {
         super(props);
@@ -40,7 +51,7 @@ export default class CartSummary extends React.PureComponent {
             console.log("cart summary render");
 
             return (
-                <View>
+                <View style= {styles.container}>
                     <Text style={ {fontSize: 20} }> Amount {this.props.amount} </Text>
                     <Text style={ {fontSize: 20} }> Total Items {this.props.totalItems} </Text>
                     <Text style={ {fontSize: 20} }> Discount {this.state.discount} % </Text>
@@ -49,3 +60,10 @@ export default class CartSummary extends React.PureComponent {
             )
     }
 }
+
+const styles = StyleSheet.create ({
+    container: {
+        marginTop: 20,
+        marginBottom: 10
+    }
+})

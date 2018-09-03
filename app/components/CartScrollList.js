@@ -1,12 +1,12 @@
 //CartScrollList.js
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
 import {View, Text, ScrollView} from "react-native";
 
 import CartItem from "./CartItem";
 
 // Pure vs Component
-export default class CartScrollList extends Component {
+export default class CartScrollList extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -15,15 +15,15 @@ export default class CartScrollList extends Component {
     
     // whenever parent render is called on update cycle
     // whenever this.setState called on update cycle
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('cartScrollList should update');
-        console.log('nextProps.items == this.props.items', 
-                                nextProps.items == this.props.items);
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     console.log('cartScrollList should update');
+    //     console.log('nextProps.items == this.props.items', 
+    //                             nextProps.items == this.props.items);
 
-        return nextProps.items != this.props.items;
-        // return true; // calls render
-        //return false; // no render
-    }
+    //     return nextProps.items != this.props.items;
+    //     // return true; // calls render
+    //     //return false; // no render
+    // }
  
     render() {
         // items should be passed from parent to child
@@ -40,7 +40,11 @@ export default class CartScrollList extends Component {
                     {
                         items.map (item => (
                             <CartItem item={item} 
-                                        key={item.id} />
+                                        key={item.id}
+                                        removeItem = {this.props.removeItem}
+                                        updateItem = {this.props.updateItem}
+                                        
+                                        />
                         ))
                     }
                 </ScrollView>
