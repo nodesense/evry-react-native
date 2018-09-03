@@ -9,3 +9,11 @@
     react-native run-android
 
     react-native run-ios
+
+
+# Commands  
+    Android Emulator
+        Press 'R' two times to reload
+        Press command + M on OSX for Developer menu or shake device
+        
+

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import {View, Text} from 'react-native';
+import {View, Text, Platform} from 'react-native';
 
 import Address from './Address';
+
+
 
 // functional component
 export default function About(props) {
@@ -14,12 +16,10 @@ export default function About(props) {
     //props.address.city = 'Chennai'
 
     const {appName, address} = props;
-
-   
-
+ 
     return (
         <View>
-            <Text>About - {appName}</Text>
+            <Text>About iOS App- {appName}</Text>
              <Address address={address} />
         </View>
     )
