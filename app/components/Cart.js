@@ -42,7 +42,6 @@ export default class Cart extends React.Component {
     }
 
 
-  
     // called on update life cycle
     addItem = () => {
         console.log("Adding new Item")
@@ -58,6 +57,7 @@ export default class Cart extends React.Component {
         //TODO
         //GOOD, immutable
         // clone the items, add item at end of the clone
+
         let items = [...this.state.items, item]
 
         //async method
@@ -96,11 +96,9 @@ export default class Cart extends React.Component {
         });
     }
 
-
     componentWillMount() {
         this.recalculate(this.state.items);
     }
-
 
     // first time on creation cycle, we cannot stop
     // called on update cycle we can stop using shouldComponentupdate

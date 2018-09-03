@@ -11,6 +11,9 @@
     react-native run-ios
 
 
+
+    react-native start --reset-cache
+
 # Commands  
     Android Emulator
         Press 'R' two times to reload

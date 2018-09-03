@@ -10,6 +10,20 @@ export default class CartScrollList extends Component {
     constructor(props) {
         super(props);
     }
+
+    // forceUpdate doesnot call shouldComponentUpdate
+    
+    // whenever parent render is called on update cycle
+    // whenever this.setState called on update cycle
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('cartScrollList should update');
+        console.log('nextProps.items == this.props.items', 
+                                nextProps.items == this.props.items);
+
+        return nextProps.items != this.props.items;
+        // return true; // calls render
+        //return false; // no render
+    }
  
     render() {
         // items should be passed from parent to child

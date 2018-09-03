@@ -3,7 +3,7 @@ import React from "react";
 
 import {View, Text} from "react-native";
  
-export default class CartSummary extends React.Component {
+export default class CartSummary extends React.PureComponent {
     // creation cycle, once once
     constructor(props) {
         super(props);

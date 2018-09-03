@@ -1,10 +1,12 @@
 // CartItem.js
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
 import {View, Text, TextInput, Button, StyleSheet} from "react-native";
- 
 
-export default class CartItem extends Component {
+// PureComponent implements shouldComponentUpdate method
+// won't call render if there is no difference in props and state
+
+export default class CartItem extends PureComponent {
      
     constructor(props) {
         super(props);
