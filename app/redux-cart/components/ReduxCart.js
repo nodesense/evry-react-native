@@ -7,16 +7,15 @@ import {View, Text,
     } from "react-native";
 
 
-// import ReduxCartList from "../containers/ReduxCartList";
-// import ReduxCartSummary from "../containers/ReduxCartList";
+import ReduxCartList from "../containers/ReduxCartList";
+import ReduxCartSummary from "../containers/ReduxCartSummary";
 
 
 export default function ReduxCart(props) {
 
         console.log("-------------------------------------")
         console.log("cart render");
-         
-         
+          
     return (
         <View style={styles.container}>
             <Text>Cart Redux {props.cartLength}</Text>
@@ -26,13 +25,18 @@ export default function ReduxCart(props) {
             />
  
             <Button title="Empty"
-                        onPress={() => props.empty()}
+                        onPress={props.empty}
+            /> 
+
+            {/* props.actions.empty from bind action creators */}
+            <Button title="Bind Action Empty"
+                        onPress={props.actions.empty}
             /> 
 
 
-            {/* <ReduxCartList />
-
-            <ReduxCartSummary /> */}
+            <ReduxCartList />
+             
+            <ReduxCartSummary />
 
         </View>
 )

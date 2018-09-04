@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         marginTop: 0,
         marginBottom: 6,
         backgroundColor: 'white',
-        height: 60
+       // height: 60
     },
    
     button: {
@@ -76,12 +76,7 @@ const styles = StyleSheet.create({
         marginLeft: 12,
         fontSize: 24,
     },
-
-    inputContainer: {
-        borderLeftWidth: 4,
-        borderRightWidth: 4,
-        height: 70
-      },
+ 
 
       input: {
         height: 30,

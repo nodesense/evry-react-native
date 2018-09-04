@@ -1,4 +1,5 @@
 /** @format */
+// index.js
 
 import {AppRegistry} from 'react-native';
 import App from './app/App';
@@ -22,11 +23,11 @@ Navigation.startTabBasedApp({
       title: 'Home'
     },
     {
-      label: 'Counter',
-      screen: 'example.Counter',
+      label: 'ProductList',
+      screen: 'reactApp.ProductList',
       icon: require('./assets/icons/user-32.png'),
       selectedIcon: require('./assets/icons/user-32.png'), // iOS only
-      title: 'Counter'
+      title: 'ProductList'
     },
     {
       label: 'Cart',

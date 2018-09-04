@@ -18,6 +18,8 @@ import ReduxDemo from './components/ReduxDemo';
 // must import from container
 import ReduxCart from './redux-cart/containers/ReduxCart';
 
+import ProductList from './redux-cart/containers/ProductList';
+
 
 // import Camera from './components/Camera';
 
@@ -42,6 +44,14 @@ export function registerScreens() {
                               store,
                               Provider
                             );
+
+
+  
+  Navigation.registerComponent('reactApp.ProductList', 
+                                () => ProductList, 
+                                store,
+                                Provider
+                              );
 
 
 

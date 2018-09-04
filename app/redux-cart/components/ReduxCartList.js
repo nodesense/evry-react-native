@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import {View, Text, FlatList, ScrollView} from "react-native";
 
-import ReduxCartItem from "../containers/CartItem";
+import ReduxCartItem from "../containers/ReduxCartItem";
  
 export default function ReduxCartList(props) {
         // items should be passed from parent to child

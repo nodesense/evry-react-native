@@ -1,5 +1,7 @@
 import {connect} from 'react-redux';
 
+import {bindActionCreators} from 'redux';
+
 import * as actions from '../state/actions';
 import ReduxCart from '../components/ReduxCart';
 
@@ -44,7 +46,12 @@ function mapDispatchToProps(dispatch) {
 
         empty: function() {
             dispatch(actions.empty())
-        }
+        },
+
+        // returns wrapper functions for all the action creators with dispatch
+        // which can dispatch automatically
+        // props.actions.empty, props.actions.addItem,...
+        actions: bindActionCreators(actions, dispatch)
     }
 }
 

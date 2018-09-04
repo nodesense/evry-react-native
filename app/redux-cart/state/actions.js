@@ -32,3 +32,28 @@ export const empty = () => ({
 })
 
 
+//sync
+export  function initProducts(products) {
+    return {
+        type: 'INIT_PRODUCTS',
+        payload: {
+            products
+        }
+    }
+}
+
+//sync
+// return type of loading function? Action Object {type: ....}
+export  function loading(loading) {
+    return {
+        type: 'LOADING',
+        payload: {
+            loading
+        }
+    }
+}
+
+// make use of Ajax call/API call
+export function fetchProducts() {
+    // thunk middleware
+}

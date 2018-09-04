@@ -26,6 +26,10 @@ export default class ReduxDemo extends React.Component {
         store.dispatch(action);
     }
 
+    increment= () => {
+        store.dispatch({type: 'INCREMENT'});
+    }
+
     componentDidMount() {
         // subscribe from store
         // subscribe called by store after dispatch
@@ -47,6 +51,8 @@ export default class ReduxDemo extends React.Component {
         return (
             <View style={ styles.container }>
                 <Text style = {{fontSize: 28}}>Redux - {state.items.length} </Text>
+
+                <Text style = {{fontSize: 28}}>Counter - {state.counter} </Text>
                 
                 <Button title="AddItem" onPress={this.addItem}>
                     
@@ -56,6 +62,12 @@ export default class ReduxDemo extends React.Component {
                  <Button title="Empty" onPress={this.empty}>
                 
                 </Button>
+
+
+                 <Button title="Increment" onPress={this.increment}>
+                
+                </Button>
+  
   
   
             </View>
