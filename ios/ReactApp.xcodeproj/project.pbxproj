@@ -39,6 +39,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		710DBB36213D9E8D00CE6E86 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710DBB35213D9E7300CE6E86 /* libReactNativeNavigation.a */; };
 		71D38E6B213D51FD00F110EF /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D38E6A213D513B00F110EF /* libRCTCameraRoll.a */; };
+		71E31CCA213E1ECE003DC6FB /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E31CC9213E1ECE003DC6FB /* RNTMapManager.m */; };
+		71E31CF6213E21A4003DC6FB /* RNTButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E31CF5213E21A4003DC6FB /* RNTButtonView.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9ADFC2E147E243BBB6CCE423 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 348E892036E5412AB609B967 /* libRNCamera.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -384,6 +386,8 @@
 		63F65164538840B5BB1BE62B /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFS.a; sourceTree = "<group>"; };
 		710DBB30213D9E7300CE6E86 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		71D38E65213D513B00F110EF /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
+		71E31CC9213E1ECE003DC6FB /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNTMapManager.m; path = ReactApp/RNTMapManager.m; sourceTree = "<group>"; };
+		71E31CF5213E21A4003DC6FB /* RNTButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNTButtonView.m; path = ReactApp/RNTButtonView.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -538,6 +542,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				71E31CC9213E1ECE003DC6FB /* RNTMapManager.m */,
+				71E31CF5213E21A4003DC6FB /* RNTButtonView.m */,
 			);
 			name = ReactApp;
 			sourceTree = "<group>";
@@ -1262,6 +1268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				71E31CF6213E21A4003DC6FB /* RNTButtonView.m in Sources */,
+				71E31CCA213E1ECE003DC6FB /* RNTMapManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

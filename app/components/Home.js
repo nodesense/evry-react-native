@@ -41,6 +41,11 @@ export default class Home extends React.Component {
                     About
                 </Button>
 
+
+                 <Button title="Redux" onPress={() => this.gotoPage('example.Redux')}>
+                    About
+                </Button>
+
                 
                 <Native />
 

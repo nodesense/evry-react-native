@@ -4,6 +4,15 @@ import {View, Button, Text, StyleSheet, Platform} from 'react-native';
 
 import {   NativeModules } from 'react-native'; 
 
+import { requireNativeComponent } from 'react-native';
+
+// requireNativeComponent automatically resolves 'RNTMap' to 'RNTMapManager'
+const MapView= requireNativeComponent('RNTMap', null);
+
+// const ButtonView= requireNativeComponent('RNTButtonView', null);
+
+// MyApp.js
+//import MapView from './MapView.js';
 
 export default class Native extends React.Component {
  
@@ -14,6 +23,9 @@ export default class Native extends React.Component {
             <View style={ styles.container }>
                 <Text style = {{fontSize: 28}}>Native Not Done</Text>
                 
+                <MapView style={{ flex: 1 }} />
+
+                {/* <ButtonView style={{ flex: 1 }} /> */}
 
             </View>
         )
