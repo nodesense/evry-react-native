@@ -28,14 +28,15 @@ export default class ProductList extends Component {
     componentDidMount() {
         console.log(" product list mounted")
         
-         //TODO
+         //TODO, calling container fetchProducts
+         this.props.fetchProducts()
     }
 
     _renderItem2({item}) {
         return (<View >
                     <Text>{item.name}</Text>
                     <Button title="+Cart" 
-                            onPress= {() => this.props.addItem(item)}
+                            onPress= {() => this.actions.props.addItem(item)}
                     >
                     </Button>
              </View>)
@@ -47,7 +48,7 @@ export default class ProductList extends Component {
     // create and return a widget per product
     _renderItem({item}) {
         return (<ProductWidget item={item} 
-                               addItem={this.props.addItem} 
+                               addItem={this.props.actions.addItem} 
                   >
 
                 </ProductWidget>

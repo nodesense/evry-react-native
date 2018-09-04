@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    products: [],
+    products: [ {id: 1, name: 'iPhone', price: 100}],
     loading: false
 }
 

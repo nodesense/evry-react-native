@@ -53,7 +53,17 @@ export  function loading(loading) {
     }
 }
 
+// thunk design pattern, that makes of use actions for async call
 // make use of Ajax call/API call
+// thunk expect a function as an action
 export function fetchProducts() {
     // thunk middleware
+        
+    // async function, to write async code
+    // to be called by thunk
+    return function (dispatch, getState) {
+        // async code
+        console.log('***CALLED BY THUNK')
+    }
+
 }

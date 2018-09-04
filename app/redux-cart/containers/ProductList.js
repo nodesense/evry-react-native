@@ -22,9 +22,12 @@ function mapReduxStateToReactProps (state) {
 
 function mapReduxDispatchToReactProps (dispatch) {
     return {
- 
+        // send as props to ProductList component
         fetchProducts: function() {
              //TODO
+             // return func as action
+             let actionFunc = actions.fetchProducts();
+             dispatch(actionFunc)
         },
 
         actions: bindActionCreators(actions, dispatch),
