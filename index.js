@@ -10,6 +10,7 @@ import { registerScreens } from './app/screens';
  
 registerScreens(); // this is where you register all of your app's screens
 
+
 // start the app
 Navigation.startTabBasedApp({
   tabs: [

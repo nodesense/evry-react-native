@@ -11,7 +11,7 @@ import Native from './Native';
 export default class Home extends React.Component {
 
     gotoPage  = (pageName) => {
-        //TODO
+        // stack based navigation
         this.props.navigator.push({
             screen: pageName
         });
@@ -42,8 +42,9 @@ export default class Home extends React.Component {
                 </Button>
 
 
-                 <Button title="Redux" onPress={() => this.gotoPage('example.Redux')}>
-                    About
+                 <Button title="Redux Demo" 
+                        onPress={() => this.gotoPage('reactApp.ReduxDemo')}>
+                    
                 </Button>
 
                 

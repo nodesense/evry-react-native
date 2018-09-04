@@ -47,7 +47,8 @@ export default class Counter extends Component {
     }
 
     render() {
-        Alert.alert('render  ' + this.state.counter)
+         // Alert.alert('render  ' + this.state.counter)
+         
          return (
             <View>
                 <Text style= { {fontSize: 30 }}>
