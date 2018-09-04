@@ -1,31 +1,13 @@
 import {createStore, combineReducers} from 'redux';
 
-
-//counterReducer.js
- 
-const INITIAL_STATE = 0
- 
- function counterReducer(state = INITIAL_STATE, 
-                                        action ) {
-    console.log('counter Reducer ', state, action)
-    switch(action.type) {
-        case "INCREMENT":
-            return state + action.payload.value
-        
-        case "RESET":
-            return INITIAL_STATE
-
-        default: 
-            return state;
-    }
-}
+import cartReducer from './redux-cart/state/cartReducer';
 
 const rootReducer = combineReducers({
-   
-    counter: counterReducer
-})
+    items: cartReducer
+});
 
-
-const store = createStore(rootReducer)
+// store calls reducer during initial creation
+// store calls reducer on dispatch
+const store = createStore(rootReducer);
 
 export default store;

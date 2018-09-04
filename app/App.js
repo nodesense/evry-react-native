@@ -14,7 +14,9 @@ import Home from './components/Home';
 
 import FileSystem from './components/FileSystem';
 
-import Camera from './components/Camera';
+import ReduxDemo from './components/ReduxDemo';
+
+// import Camera from './components/Camera';
 
 // import {createStackNavigator} from 'react-navigation';
 
@@ -47,39 +49,16 @@ export default class App extends Component {
             appName: 'React App'
         }
     }
-
-    clicked = () => {
-        Alert.alert('clciked super')
-    }
-
-    toast = () => {
-        ToastExample.show('Awesome', ToastExample.SHORT)
-    }
+ 
 
     // react keyword
     // create Virtual DOM
     render() {
         return (
              <View style={ styles.container }>
-                <Text>Welcome Camera</Text>
-                <Text>Welcome Button </Text>
-                <Button title="toast" onPress={this.toast}>
-                </Button>
-                <View style = { { backgroundColor:'lightgreen', height: 100} }>
-                <ButtonView style = {styles.scannerview} 
-                            textTitle = 'My Text' 
-                            clicked={this.clicked} 
-                            timeoutEvent={this.clicked}
-                            />
-
-
-                </View>
-
-                <Button
-                    onPress={() => NativeModules.DetailsActivity.navigateToExample()}
-                title='Start example activity'
-                    />
-                {/* <Camera /> */}
+                <Text>React App</Text>
+                 
+                <ReduxDemo />
              </View>
         )
     }

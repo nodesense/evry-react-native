@@ -5,6 +5,8 @@ import { Navigation } from 'react-native-navigation';
 import {Provider} from 'react-redux';
 import store from './store';
 
+import App from './App';
+
 import About from './components/About';
 import Counter from './components/Counter';
 import Cart from './components/Cart';
@@ -13,7 +15,7 @@ import ReduxCounter from './containers/ReduxCounter';
 
 // register all screens of the app (including internal ones)
 export function registerScreens() {
-  Navigation.registerComponent('example.Home', () => Home,  store,
+  Navigation.registerComponent('example.Home', () => App,  store,
   Provider);
   Navigation.registerComponent('example.About', () => About,  store,
   Provider);
