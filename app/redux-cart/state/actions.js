@@ -64,6 +64,21 @@ export function fetchProducts() {
     return function (dispatch, getState) {
         // async code
         console.log('***CALLED BY THUNK')
+
+        fetch('https://nodesense.github.io/products.json')
+        .then ( response => {
+            console.log('RESPONSE ', response);
+            return response.json(); // return promise
+        })
+        .then (result => {
+            const products = result.products;
+            // put data to store
+
+            const action = initProducts(products);
+            dispatch(action); // dispatching object as action
+
+        })
+
     }
 
 }
