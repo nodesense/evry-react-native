@@ -2,14 +2,8 @@ import React from "react";
 
 import {View, Text} from "react-native";
 
-export default function CartSummary(props) {
+export default function ReduxCartSummary(props) {
             console.log("cart summary render");
-
-            // props are read only
-            // error / we can't overwrite
-            // we should not overwrite
-            //this.props.amount = 1000;
-            
             return (
                 <View>
                     <Text> Amount {props.amount} </Text>

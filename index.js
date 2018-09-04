@@ -35,6 +35,14 @@ Navigation.startTabBasedApp({
       selectedIcon: require('./assets/icons/user-32.png'), // iOS only
       title: 'Cart'
     }
+    ,
+    {
+      label: 'Redux Cart',
+      screen: 'reactApp.ReduxCart',
+      icon: require('./assets/icons/user-32.png'),
+      selectedIcon: require('./assets/icons/user-32.png'), // iOS only
+      title: 'Redux Cart'
+    }
   ]
 });
 

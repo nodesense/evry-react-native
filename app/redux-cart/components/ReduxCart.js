@@ -6,11 +6,12 @@ import {View, Text,
         Slider
     } from "react-native";
 
-import CartList from "../containers/CartList";
-import CartSummary from "../containers/CartSummary";
+
+// import ReduxCartList from "../containers/ReduxCartList";
+// import ReduxCartSummary from "../containers/ReduxCartList";
 
 
-export default function Cart(props) {
+export default function ReduxCart(props) {
 
         console.log("-------------------------------------")
         console.log("cart render");
@@ -18,33 +19,27 @@ export default function Cart(props) {
          
     return (
         <View style={styles.container}>
-            <Text>Cart Redux</Text>
-
-            
-
+            <Text>Cart Redux {props.cartLength}</Text>
+ 
             <Button title="Add"
                         onPress={() => props.addItem()}
             />
  
             <Button title="Empty"
-                        onPress={() => props.actions.empty()}
+                        onPress={() => props.empty()}
             /> 
 
 
-            <CartList />
+            {/* <ReduxCartList />
 
-            <CartSummary />
+            <ReduxCartSummary /> */}
 
         </View>
 )
     }
 
 
-
-Cart.defaultProps = {
-    title  : "Cart"
-}
-
+ 
 
 
 const styles = StyleSheet.create({

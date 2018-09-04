@@ -4,7 +4,7 @@ import {View, Button, Text, StyleSheet, Platform} from 'react-native';
 
 import {   NativeModules } from 'react-native';
 import ToastExample from './ToastExample';
-
+ 
 import Native from './Native';
 
 
@@ -32,8 +32,14 @@ export default class Home extends React.Component {
                 <Button title="Counter" onPress={() => this.gotoPage('example.Counter')}>
                     Counter
                 </Button>
+ 
+                <Button title="Camera" 
+                    onPress={() => this.gotoPage('example.Camera')} 
+                    
+                />
+                 
 
-                 <Button title="Cart" onPress={() => this.gotoTab('example.Cart')}>
+                 <Button title="Cart" onPress={() => this.gotoPage('example.Cart')}>
                     Cart
                 </Button>
 

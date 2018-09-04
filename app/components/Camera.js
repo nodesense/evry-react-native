@@ -36,7 +36,9 @@ export default class NativeCamera extends Component {
   takePicture() {
     Alert.alert("taking picture");
 
-    const options = {};
+    const options = {
+      target: Camera.constants.CaptureTarget.temp
+    };
     //options.location = ...
     this.camera.capture({metadata: options})
       .then((data) => {

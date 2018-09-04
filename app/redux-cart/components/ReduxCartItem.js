@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import {View, Text, TextInput, Button, StyleSheet} from "react-native";
 
-export default function CartItem(props) {
+export default function ReduxCartItem(props) {
         // deconstruct
         let {item} = props;
         
@@ -33,7 +33,7 @@ export default function CartItem(props) {
                 />
 
                 {/* remove item from cart */}
-                <Button title="-1" 
+                <Button title="RM" 
                             onPress={() => {props.actions.removeItem(item.id)}  }
                 />
                 </View>
