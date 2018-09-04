@@ -41,7 +41,6 @@ export default class Cart extends React.Component {
  
     }
 
-
     // called on update life cycle
     addItem = () => {
         console.log("Adding new Item")

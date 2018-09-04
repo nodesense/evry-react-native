@@ -24,3 +24,10 @@ export default function About(props) {
         </View>
     )
 }
+
+About.defaultProps = {
+    address: {
+        city: 'BLR',
+        state: 'KA'
+    }
+}

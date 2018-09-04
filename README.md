@@ -20,3 +20,6 @@
         Press command + M on OSX for Developer menu or shake device
         
 
+npm install --save react-native-navigation@alpha
+
+
